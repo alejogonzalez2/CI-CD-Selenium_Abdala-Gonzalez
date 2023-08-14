@@ -1,4 +1,4 @@
-name: Subir al render
+name: Subir al render con imagen docker
 
 on:
   push:
@@ -10,8 +10,14 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: npm ci
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Build Docker image
+      run: docker build -t ajelo1/cicdos .
+      
+    - name: Log in to Docker Hub
+      run: docker login -u ajelo1 -p ${{ secrets.DOCKERHUB_PASSWORD }}
+      
+    - name: Push Docker image
+      run: docker push ajelo1/cicdos
