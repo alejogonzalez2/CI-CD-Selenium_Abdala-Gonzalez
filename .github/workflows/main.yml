@@ -2,8 +2,6 @@ name: Subir al render
 
 on:
   push:
-    types:
-      - closed
     branches:
       - desarrollo
       - main
