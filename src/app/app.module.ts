@@ -25,13 +25,6 @@ import { CargaComponent } from './carga/carga.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FirestoreModule,
-    
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore(),
-    
-    )
   ],
   providers: [],
   bootstrap: [AppComponent]

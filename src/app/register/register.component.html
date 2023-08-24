@@ -7,8 +7,7 @@
             <input #mail id="mail" placeholder="Correo">
         </div>
         <input #password id="password" placeholder="Contraseña" type="password">
-        <button (click)="register(mail.value, password.value)" id="btn">Registrarse</button>
-        <p style="color: red;">{{error}}</p>
+        <button (click)="register()" id="btn">Registrarse</button>
         <a id="link" routerLink="/login">¿Ya tenés cuenta?</a>
         
     </div>

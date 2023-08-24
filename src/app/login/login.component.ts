@@ -1,20 +1,18 @@
+import { Router } from "@angular/router"
 import { Component } from '@angular/core';
-import { FirebaseServiceService } from '../firebase-service.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent {
   error: any
-  constructor(private fbservice: FirebaseServiceService){
+  constructor(private router: Router){
     this.error = ""
   }
-  public login(email: string, password: string){
-    return this.fbservice.login(email, password)
-  }
-  public loginWithGoogle(){
-    return this.fbservice.registerGoogle()
+  public login(){
+    this.router.navigate(["/Datos"]) 
   }
 }

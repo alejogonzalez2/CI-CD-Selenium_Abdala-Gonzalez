@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FirebaseServiceService } from '../firebase-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,14 +8,13 @@ import { FirebaseServiceService } from '../firebase-service.service';
 })
 export class RegisterComponent {
   error: any
-  constructor(private fbservice: FirebaseServiceService){
+  constructor(private router: Router){
     this.error = ""
   }
 
-  public register(mail: any, password: any){
-    console.log("aver")
-    this.error = localStorage.getItem("error")
-    return this.fbservice.register(mail, password)
+  public register(){
+    console.log("entra?")
+    this.router.navigate(["/Datos"])
   }
 
   

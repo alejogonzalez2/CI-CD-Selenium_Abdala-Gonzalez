@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FirebaseServiceService } from '../firebase-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carga',
@@ -8,12 +8,12 @@ import { FirebaseServiceService } from '../firebase-service.service';
 })
 export class CargaComponent {
   status: string;
-  constructor(private fbservice: FirebaseServiceService){
+  constructor(private router: Router){
     this.status=""
   }
   
   public logOut(){
-    this.fbservice.logOut()
+    this.router.navigate(["/login"])
   }
 
   public mandar(pal: string, num: string){

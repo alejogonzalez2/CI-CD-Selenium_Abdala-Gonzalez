@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FirebaseServiceService } from '../firebase-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-datos',
@@ -11,13 +11,13 @@ export class DatosComponent {
   error: string
   lista: Array<Array<any>>;
 
-  constructor(private fbservice: FirebaseServiceService){
+  constructor(private router: Router){
     this.lista = []
     this.error = ""
   }
   
   public logOut(){
-    this.fbservice.logOut()
+    this.router.navigate(["/login"])
   }
   public async ngOnInit(){
     const rta = await fetch("https://apis.datos.gob.ar/series/api/series/?ids=120.1_ED1_1993_0_26")
