@@ -18,6 +18,7 @@ import { CargaComponent } from './carga/carga.component';
     AppComponent,
     DatosComponent,
     MenuComponent,
+    LoginComponent,
     RegisterComponent,
     CargaComponent,
   ],
