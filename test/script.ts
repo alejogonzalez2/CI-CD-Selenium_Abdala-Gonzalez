@@ -6,7 +6,7 @@ import * as fs from 'fs'
 
 const service = new chrome.ServiceBuilder(chromedriver.path).build()
 
-const laUrl = "https://cicd-ad4w.onrender.com"
+const laUrl = "http://localhost:4200"
 
 describe('la selenio prueba', () => {
     let driver: WebDriver
