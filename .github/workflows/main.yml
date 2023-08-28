@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  build-and-push:
+  hace-todo:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -21,3 +21,12 @@ jobs:
       
     - name: Push Docker image
       run: docker push ajelo1/cicdos
+
+    - name: install
+      run: npm install
+
+    - name: start
+      run: npm start &
+
+    - name: prueba selenio
+      run: npm run test-browserstack
