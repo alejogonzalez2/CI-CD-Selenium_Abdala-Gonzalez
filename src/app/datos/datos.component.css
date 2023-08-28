@@ -4,11 +4,11 @@
     margin-left: 15vh;
     margin-right: 15vh;
 }
-#btn-menu{
+.btn-menu{
     transition: ease-in-out .3s;
     background-color: black;
 }
-#btn-menu:hover{
+.btn-menu:hover{
     color: black;
     background-color: white;
     transition: ease-in-out .3s;
